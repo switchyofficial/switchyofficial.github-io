@@ -1,2 +1,2 @@
-# switchyofficial.github-io
+# Switchy staging
 Staging of switchy web application
