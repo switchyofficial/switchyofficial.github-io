@@ -1,17 +1,19 @@
-
 .logo,
 .header_right {
 	display: table-cell;
     vertical-align: middle;
 }
+
 .logo a {
 	width: 110px;
 	display: inline-block;
 }
+
 .logo img {
 	width: 100%;
 	height: auto;
 }
+
 .header_right {
 	text-align: right;
 	height: 40px;
@@ -29,10 +31,16 @@
 }
 
 .header_right .sign_in {
-	color: #FFA726;
+	color: #ffa726;
+	transition: all 0.35s ease;
 }
+
+.header_right .sign_in:hover {
+	text-decoration: underline;
+}
+
 .logo a {
-	color: #FFA726;
+	color: #ffa726;
 
 }
 
@@ -55,15 +63,28 @@
 
 .wrap {
 	width: 100%;
-	max-width: 1200px;
+	max-width: 1171px;
 	margin: 0 auto;
 }
 
 .main {
-	display: table;
 	width: 100%;
 	padding: 10px 0 0;
 }
+
+.main::before,
+.main::after,
+.filter_sidebar_container::before,
+.filter_sidebar_container::after {
+	display: table;
+	content: "";
+}
+
+.filter_sidebar_container::after,
+.main::after {
+	clear: both;
+}
+
 .item:after,
 .post:after {
 	display: table;
@@ -73,26 +94,25 @@
 
 .market {
 	width: 50%;
-	display: table-cell;
+	float: left;
 	vertical-align: top;
 	padding: 0 15px;
-
 }
 
 .right_section {
-	display: table-cell;
-	width: 20%;
+	float: left;
+	width: 25%;
 }
 
 .post {
 	background: #fff;
-	padding: 10px;
+	padding: 15px;
 	border: 1px solid #d4d4d4;
-	margin-bottom: 8px;
+	margin-bottom: 12px;
 }
 
 .post_head {
-	margin-bottom: 10px;
+	margin-bottom: 13px;
 }
 .post .p_head {
 	margin-bottom: 2px;
@@ -104,7 +124,6 @@
 	color: rgba(0,0,0,0.45);
 	font-size: 12px;
 }
-
 
 .name {
 	font-weight: bold;
@@ -125,10 +144,6 @@
 	vertical-align: middle;
 }
 
-.profile_info .name {
-
-}
-
 .time_lapse {
 	font-size: 12px;
 }
@@ -138,17 +153,20 @@
 	width: 100%;
 	background: url('../images/common/swap_icon2.png') no-repeat center center;
 	background-size: 55px 58px;
-	margin-bottom: 8px;
+	margin-bottom: 12px;
 }
 
 .have,
 .want {
 	position: relative;
-	width: 45%;
+	width: 44%;
 	padding: 10px;
 	min-height: 120px;
 	background: rgba(0,0,0,0.02);
-
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid rgba(204, 204, 204, 0.33);
 }
 .have {
 	float: left;
@@ -161,9 +179,10 @@
 .post li {
 	border: 1px solid #ccc;
 	background: #fff;
-	margin-right: 2px;
-	margin-bottom: 2px;
+	margin-right: 5px;
+    margin-bottom: 2px;
 }
+
 .item_image {
 	position: relative;
 	display: inline-block;
@@ -184,6 +203,7 @@
 	min-width: 360px;
 	z-index: 2;
 }
+
 .thumb,
 .profile_thumb {
 	position: absolute;
@@ -198,23 +218,12 @@
 
 .cash {
 	font-size: 28px;
-	color: #FFA726;
+	color: #ffa726;
 }
 
 .filter_sidebar {
-	display: table-cell;
-	vertical-align: top;
+	float: left;
 	width: 25%;
-	background: #fff;
-	border: 1px solid #d4d4d4
-}
-
-.f_sidebar_in {
-	height: 100%;
-	padding: 25px;
-}
-.search_block .search_form {
-	height: 100%;
 }
 
 .search_block .search_form span {
@@ -222,7 +231,6 @@
 	margin-bottom: 10px;
 	height: 40px;
 }
-
 
 .search_block .search input {
 	background-image: url('../images/common/search_icon.png');
@@ -236,11 +244,12 @@
 .search_block .submit input {
 	padding: 0 20px;
 	color: #fff;
-	background: #FFA726;
+	background: #ffa726;
 	outline: none;
-	border: 1px solid #FFA726;
+	border: 1px solid #ffa726;
 	border-radius: 2px;
 	cursor: pointer;
+	width: 100%;
 }
 
 .search_block .submit input:hover {
@@ -280,4 +289,59 @@
 	text-align: center;
 	font-size: 26px;
 	border: 1px solid #d4d4d4;
+}
+
+
+
+.f_sidebar_in,
+.profile_section {
+	padding: 20px;
+	background: #fff;
+	border: 1px solid #d4d4d4;
+}
+
+.profile_link {
+	display: block;
+	width: 100%;
+	max-height: 200px;
+	overflow: hidden;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	padding: 1px;
+}
+
+.profile_link_thumb {
+	width: 100%;
+	display: block;
+}
+
+.profile_section {
+	margin-bottom: 10px;
+}
+
+.profile_details {
+	margin-top: 10px;
+}
+
+.profile_details_item {
+	margin-bottom: 5px;
+}
+
+.profile_details_item:last-of-type {
+	margin-bottom: 0;
+}
+
+.profile_details_item_badges {
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.profile_details_item_badges img {
+	margin: 0 5px;
+}
+
+.profile_details_item a:hover {
+	text-decoration: underline;
 }
