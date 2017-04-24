@@ -87,7 +87,7 @@
 .post {
 	background: #fff;
 	padding: 10px;
-	border: 1px solid #ececec;
+	border: 1px solid #d4d4d4;
 	margin-bottom: 8px;
 }
 
@@ -206,6 +206,7 @@
 	vertical-align: top;
 	width: 25%;
 	background: #fff;
+	border: 1px solid #d4d4d4
 }
 
 .f_sidebar_in {
@@ -225,7 +226,7 @@
 
 .search_block .search input {
 	background-image: url('../images/common/search_icon.png');
-	
+
 }
 
 .search_block .location input {
@@ -253,7 +254,7 @@
 .search_block input[type=text] {
 	width: 100%;
 	padding: 0 12px 0 32px;
-	background-color: #fff; 
+	background-color: #fff;
 	background-repeat: no-repeat;
 	background-position: 7px center;
 	background-size: 18px 18px;
@@ -278,4 +279,5 @@
 	padding: 60px 20px;
 	text-align: center;
 	font-size: 26px;
+	border: 1px solid #d4d4d4;
 }
