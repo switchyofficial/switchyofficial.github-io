@@ -23,7 +23,9 @@ ul li {
 	list-style: none;
 }
 
-input[type=text] {
+input[type=text],
+select {
+    width: 100%;
 	padding: 0 7px;
     line-height: 17px;
     color: #666;
@@ -32,13 +34,13 @@ input[type=text] {
     border: 1px solid #ccc;
     outline: none;
     height: 35px;
-    min-width: 238px;
-	transition: all 0.35s ease;
 
 }
 
 input[type=text]:focus {
 	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.06), 0 3px 1px -2px rgba(0,0,0,0.08);
+	transition: all 0.35s ease;
+
 
  }
 input::-webkit-input-placeholder {
@@ -49,16 +51,26 @@ input:-moz-placeholder {
 	color: rgba(0,0,0,0.35);
 }
 
+header {
+	z-index: 1000;
+}
+
 /*underlined lik*/
-.u_l:hover {
+.u-l:hover {
 	text-decoration: underline;
 }
 
 /*raised button*/
 
-.r_btn {
+.r-btn {
 	transition: all 0.35s ease;
 }
-.r_btn:hover {
+.r-btn:hover {
 	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.08), 0 1px 5px 0 rgba(0,0,0,0.08), 0 3px 1px -2px rgba(0,0,0,0.08);
 }
+
+.brdr1 {
+	border: 1px solid #d4d4d4;
+	background: #fff;
+}
+
